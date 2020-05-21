@@ -17,6 +17,12 @@ Rust server has built-in Harmony loader, so all harmony patches (***.dll**) will
   - Create a directory called `HarmonyMods` in the **root** directory of your Rust server.  
   *(if it is not exists yet)*
   - Put `OxideNoLimit.dll` into `YourServerRootDir/HarmonyMods`.
- 
-  --  
+
+### Usage Notes
+Be careful when doing Unpatch of your Harmony patches!  
+Do **NOT** call `UnpatchAll()` on your Harmony instance without specifying the `Instance ID`.  
+Doing this will rollback **all** patches been ever made from **all** Harmony instances and will bring back the Sandbox.  
+Always explicitly specify your `Instance ID` and [read the docs](https://harmony.pardeike.net/articles/basics.html#unpatching).
+
+--  
   Licensed under MIT. Comes without support & warranties.
